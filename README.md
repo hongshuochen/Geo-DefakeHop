@@ -9,7 +9,9 @@ A robust fake satellite image detection method, called ["Geo-DefakeHop"](https:/
 ## Download the data
 
 [Fake_Satellite_Imagery](https://figshare.com/articles/dataset/Fake_Satellite_Imagery/12197655/2)
+
 [Link text Here](https://link-url-here.org)
+
 [Link text Here](https://link-url-here.org)
 
 ## Data structure
