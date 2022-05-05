@@ -6,6 +6,59 @@ Still Constructing...
 
 A robust fake satellite image detection method, called ["Geo-DefakeHop"](https://arxiv.org/abs/2110.09795), is proposed in this work. Geo-DefakeHop is developed based on the parallel subspace learning (PSL) methodology. PSL maps the input image space into several feature subspaces using multiple filter banks. By exploring response differences of different channels between real and fake images for filter banks, Geo-DefakeHop learns the most discriminant channels based on the validation dataset, uses their soft decision scores as features, and ensemble them to get the final binary decision. Geo-DefakeHop offers a light-weight high-performance solution to fake satellite images detection. The model size of Geo-DefakeHop ranges from 0.8K to 62K parameters depending on different hyper-parameter setting. Experimental results show that Geo-DefakeHop achieves F1-scores higher than 95% under various common image manipulations such as resizing, compression and noise corruption.
 
+## Data structure
+```
+data
+.
+├── anti-deepfake-data and code
+│   ├── code
+│   └── data
+│       ├── authentic
+│       │   ├── Beijing
+│       │   ├── Beijing_128
+│       │   ├── Seattle
+│       │   ├── Seattle_128
+│       │   ├── Tacoma
+│       │   └── Tacoma_128
+│       ├── base
+│       └── fake
+│           ├── Beijing_style
+│           └── Seattle_style
+├── lightGAN-gen
+│   ├── images
+│   │   ├── Beijing-generated-150
+│   │   │   ├── default
+│   │   │   └── ema
+│   │   ├── Seattle-generated-150
+│   │   │   ├── default
+│   │   │   └── ema
+│   │   └── Tacoma-generated-150
+│   │       ├── default
+│   │       └── ema
+│   └── models
+│       ├── Beijing
+│       ├── Seattle
+│       └── Tacoma
+└── styleGAN-attn-gen
+    ├── images
+    │   ├── Beijing
+    │   │   ├── default
+    │   │   ├── ema
+    │   │   └── mr
+    │   ├── Seattle
+    │   │   ├── default
+    │   │   ├── ema
+    │   │   └── mr
+    │   └── Tacoma
+    │       ├── default
+    │       ├── ema
+    │       └── mr
+    └── models
+        ├── Beijing
+        ├── Seattle
+        └── Tacoma
+
+```
 
 ## Cite us
 If you use this repository, please consider to cite.
