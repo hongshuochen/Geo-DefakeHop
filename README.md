@@ -69,6 +69,17 @@ If you use this repository, please consider to cite.
   journal={arXiv preprint arXiv:2110.09795},
   year={2021}
 }
+
+@article{zhao2021deep,
+  title={Deep fake geography? When geospatial data encounter Artificial Intelligence},
+  author={Zhao, Bo and Zhang, Shaozeng and Xu, Chunxue and Sun, Yifan and Deng, Chengbin},
+  journal={Cartography and Geographic Information Science},
+  volume={48},
+  number={4},
+  pages={338--352},
+  year={2021},
+  publisher={Taylor \& Francis}
+}
 ```
 ## Acknowledgment
 This work was supported by the Army Research Labora- tory (ARL) under agreement W911NF2020157. Computation for the work was supported by the University of Southern California’s Center for High Performance Computing (hpc.usc.edu).
