@@ -10,9 +10,7 @@ A robust fake satellite image detection method, called ["Geo-DefakeHop"](https:/
 
 [Fake_Satellite_Imagery](https://figshare.com/articles/dataset/Fake_Satellite_Imagery/12197655/2)
 
-[Link text Here](https://link-url-here.org)
-
-[Link text Here](https://link-url-here.org)
+[USC Fake_Satellite_Imagery (StyleGAN and LightGAN)](https://drive.google.com/drive/folders/1-IseM3vwoN8aqcsced_BEV6wiPWfTC45?usp=sharing)
 
 ## Data structure
 ```
