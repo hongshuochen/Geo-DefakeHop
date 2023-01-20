@@ -1,7 +1,5 @@
 # Geo-DefakeHop: High-Performance Geographic Fake Image Detection
 
-Still Constructing...
-
 ![Framework](img/framework.png)
 
 A robust fake satellite image detection method, called ["Geo-DefakeHop"](https://arxiv.org/abs/2110.09795), is proposed in this work. Geo-DefakeHop is developed based on the parallel subspace learning (PSL) methodology. PSL maps the input image space into several feature subspaces using multiple filter banks. By exploring response differences of different channels between real and fake images for filter banks, Geo-DefakeHop learns the most discriminant channels based on the validation dataset, uses their soft decision scores as features, and ensemble them to get the final binary decision. Geo-DefakeHop offers a light-weight high-performance solution to fake satellite images detection. The model size of Geo-DefakeHop ranges from 0.8K to 62K parameters depending on different hyper-parameter setting. Experimental results show that Geo-DefakeHop achieves F1-scores higher than 95% under various common image manipulations such as resizing, compression and noise corruption.
