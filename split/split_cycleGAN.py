@@ -7,12 +7,13 @@ if __name__ == '__main__':
     labels = list()
     for root, dirs, files in os.walk("../data/anti-deepfake-data and code/data/authentic"):
         for file in files:
-            fp = os.path.join(root, file)
-            fps.append(fp)
-            labels.append(0)
+            if "_128" not in root:
+                fp = os.path.join(root, file)
+                fps.append(fp)
+                labels.append(0)
 
     for root, dirs, files in os.walk("../data/anti-deepfake-data and code/data/fake"):
-        for file in files:
+        for file in files:        
             fp = os.path.join(root, file)
             fps.append(fp)
             labels.append(1)
@@ -29,7 +30,7 @@ if __name__ == '__main__':
         info.append([X_test[i], y_test[i], "test"])
     cols=['FP', 'isFake', 'SET']
     df=pd.DataFrame(info,columns=cols)
-    df.to_csv("data_10_10_80.csv", index=False)
+    df.to_csv("cycleGAN_10_10_80.csv", index=False)
     
     # 40% 10% 50%
     X_train, X_test, y_train, y_test = train_test_split(fps, labels, test_size=0.5, random_state=777)
@@ -43,7 +44,7 @@ if __name__ == '__main__':
         info.append([X_test[i], y_test[i], "test"])
     cols=['FP', 'isFake', 'SET']
     df=pd.DataFrame(info,columns=cols)
-    df.to_csv("data_40_10_50.csv", index=False)
+    df.to_csv("cycleGAN_40_10_50.csv", index=False)
 
     # 80% 10% 10%
     X_train, X_test, y_train, y_test = train_test_split(fps, labels, test_size=0.1, random_state=777)
@@ -57,5 +58,5 @@ if __name__ == '__main__':
         info.append([X_test[i], y_test[i], "test"])
     cols=['FP', 'isFake', 'SET']
     df=pd.DataFrame(info,columns=cols)
-    df.to_csv("data_80_10_10.csv", index=False)
+    df.to_csv("cycleGAN_80_10_10.csv", index=False)
 
