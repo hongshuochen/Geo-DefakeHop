@@ -22,11 +22,12 @@ python preprocess.py
 ## Quick start
 ```bash
 cd geo-defakehop
-python main.py -f ../split/cycleGAN_10_10_80.csv 
-python main.py -f ../split/cycleGAN_40_10_50.csv 
-python main.py -f ../split/cycleGAN_80_10_10.csv 
-python main.py -f ../split/lightGAN_10_10_80.csv 
-python main.py -f ../split/styleGAN-attn_10_10_80.csv 
+python main.py -k 2 -f ../split/cycleGAN_10_10_80.csv # 10% training, 10% validation, 80% testing
+python main.py -k 2 -f ../split/cycleGAN_40_10_50.csv 
+python main.py -k 2 -f ../split/cycleGAN_80_10_10.csv 
+python main.py -k 2 -f ../split/lightGAN_10_10_80.csv 
+python main.py -k 2 -f ../split/styleGAN-attn_10_10_80.csv 
+python main.py -k 2 3 4 -f ../split/cycleGAN_10_10_80.csv # more kerenls
 ```
 ### Perturbation
 ```bash
