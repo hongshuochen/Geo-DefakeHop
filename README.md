@@ -10,6 +10,31 @@ A robust fake satellite image detection method, called ["Geo-DefakeHop"](https:/
 
 [USC Fake_Satellite_Imagery (StyleGAN and LightGAN)](https://drive.google.com/drive/folders/1-IseM3vwoN8aqcsced_BEV6wiPWfTC45?usp=sharing)
 
+And place it under data/ and preprocess the data
+```bash
+cd data
+unzip anti-deepfake-data\ and\ code.zip
+tar -xzvf lightGAN-gen.tar.gz
+tar -xzvf styleGAN-attn-gen.tar.gz
+python preprocess.py
+```
+
+## Quick start
+```bash
+cd geo-defakehop
+python main.py -f ../split/cycleGAN_10_10_80.csv 
+python main.py -f ../split/cycleGAN_40_10_50.csv 
+python main.py -f ../split/cycleGAN_80_10_10.csv 
+python main.py -f ../split/lightGAN_10_10_80.csv 
+python main.py -f ../split/styleGAN-attn_10_10_80.csv 
+```
+### Perturbation
+```bash
+# will update
+# python main.py -i 128 -q 85 -n 0.1 -k 2 3 4 -f ../split/cycleGAN_40_10_50.csv 
+```
+
+
 ## Data structure
 ```
 data
@@ -86,4 +111,4 @@ If you use this repository, please consider to cite.
 }
 ```
 ## Acknowledgment
-This work was supported by the Army Research Labora- tory (ARL) under agreement W911NF2020157. Computation for the work was supported by the University of Southern California’s Center for High Performance Computing (hpc.usc.edu).
+This work was supported by the Army Research Laboratory (ARL) under agreement W911NF2020157. Computation for the work was supported by the University of Southern California’s Center for High Performance Computing (hpc.usc.edu).

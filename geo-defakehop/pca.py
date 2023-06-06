@@ -76,6 +76,7 @@ if __name__ == "__main__":
 
     print(pca.explained_variance_)
     print(mypca.eigenvalues)
+    print(np.var(pca.transform(X), axis=0, ddof=1))
     
     print(pca.explained_variance_ratio_)
     print(mypca.eigenvalues/np.sum(mypca.eigenvalues))

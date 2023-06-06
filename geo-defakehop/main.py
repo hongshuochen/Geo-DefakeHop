@@ -298,12 +298,13 @@ if __name__ == "__main__":
                         help='set the kernel sizes')
     parser.add_argument('-s','--seed', default=777, type=int,
                         help='set the seed')
-    parser.add_argument('-f','--csv-file', default="../split/data_80_10_10.csv", type=str,
+    parser.add_argument('-f','--csv-file', default="../split/cycleGAN_10_10_80.csv", type=str,
                         help='set the input csv file')
 
     args = parser.parse_args()
     timestr = time.strftime("%Y_%m%d_%H%M")
-    save_path = "./records/"+ __file__.replace(".py","") + '/' + str(args.image_size) + '_' + str(args.quality) + '_' + str(args.noise) + '_' + str(args.kernel_sizes) + '_' + args.csv_file[-6:-4] + "/%s" % timestr
+    cur_file_name = os.path.basename(__file__)
+    save_path = "./records/"+ cur_file_name.replace(".py","") + '/' + str(args.image_size) + '_' + str(args.quality) + '_' + str(args.noise) + '_' + str(args.kernel_sizes) + '_' + args.csv_file[-6:-4] + "/%s" % timestr
     os.makedirs(save_path, exist_ok=True)
 
     # Train the model
@@ -317,7 +318,7 @@ if __name__ == "__main__":
     acc = accuracy_score(test_image_labels, test_p)
     precision = precision_score(test_image_labels, test_p)
     recall = recall_score(test_image_labels, test_p)
-    print(f1,acc,precision,recall)
+    print("F1 score: %f" % f1, "Accuracy: %f" % acc, "Precision: %f" % precision, "Recall: %f" % recall)
     with open(save_path + '/test.txt', 'a') as f:
         f.write('f1: %f\n' % f1)
         f.write('acc: %f\n' % acc)

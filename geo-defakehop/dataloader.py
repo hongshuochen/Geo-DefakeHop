@@ -32,7 +32,7 @@ class DeepfakeSatelliteImageDataset(Dataset):
         return image, int(self.images.iloc[idx]["isFake"])
 
 if __name__ == "__main__":
-    csv_file = "../split/data_10_10_80.csv"
+    csv_file = "../split/cycleGAN_10_10_80.csv"
     image_datasets = {x: DeepfakeSatelliteImageDataset(csv_file=csv_file, mode=x)
                     for x in ['train', 'val', 'test']}
     dataset_sizes = {x: len(image_datasets[x]) for x in ['train', 'val', 'test']}
